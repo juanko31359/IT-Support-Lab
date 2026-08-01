@@ -145,3 +145,13 @@ The `net session` command returned:
 This confirmed that the account did not have elevated administrative privileges.
 
 ![Standard user administrative access denied](../screenshots/LAB-02/05-standard-user-admin-access-denied.png)
+
+## Conclusion
+
+The objectives of LAB-02 were completed successfully.
+
+The local account `mtorres` was configured as a standard user and received access to `C:\LabData\Support` through membership in `Support-Team`.
+
+The user successfully created, edited, renamed, and deleted files inside the designated folder. Administrative access was correctly denied.
+
+This lab demonstrated practical Windows account administration, local group management, NTFS permission configuration, least-privilege access, technical validation, and service-request documentation.
