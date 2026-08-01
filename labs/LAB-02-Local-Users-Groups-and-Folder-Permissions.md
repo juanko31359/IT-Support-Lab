@@ -103,3 +103,45 @@ Added `Support-Team` and granted the `Modify` permission.
 Signed out of the administrator account and signed in as Maya Torres.
 
 The user successfully changed the temporary password during the first sign-in.
+
+## Validation
+
+### Local Account Created
+
+The local account `mtorres` was created for Maya Torres.
+
+![Local user account created](../screenshots/LAB-02/01-local-user-mtorres-created.png)
+
+### Group Membership
+
+The account belongs to `Users` and `Support-Team`, but not to `Administrators`.
+
+![Local user group memberships](../screenshots/LAB-02/02-local-user-group-memberships.png)
+
+### NTFS Permissions
+
+The `Support-Team` group was granted `Modify` permission on `C:\LabData\Support`.
+
+`Full control` was not granted.
+
+![Support folder NTFS permissions](../screenshots/LAB-02/03-support-folder-ntfs-permissions.png)
+
+### File Access Test
+
+The user successfully created, edited, renamed, and deleted files inside the Support folder.
+
+![File access test completed](../screenshots/LAB-02/04-file-access-test-completed.png)
+
+### Administrative Access Test
+
+The `whoami` command confirmed the active account as:
+
+`lab-ws01\mtorres`
+
+The `net session` command returned:
+
+`System error 5 has occurred. Access is denied.`
+
+This confirmed that the account did not have elevated administrative privileges.
+
+![Standard user administrative access denied](../screenshots/LAB-02/05-standard-user-admin-access-denied.png)
