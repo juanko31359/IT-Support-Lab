@@ -37,3 +37,69 @@ The account must remain a standard user without administrative privileges.
 - Applying the principle of least privilege
 - Testing file and administrative access
 - Documenting a service request in GitHub
+
+## Procedure
+
+### 1. Create the Local User
+
+Opened Local Users and Groups by running `lusrmgr.msc`.
+
+Created the following local account:
+
+- Username: `mtorres`
+- Full name: Maya Torres
+- Description: Support Assistant - Lab account
+- Account type: Standard user
+
+The account was configured to require a password change at the first sign-in.
+
+### 2. Create the Local Group
+
+Created the local group `Support-Team` with the description:
+
+`Local group for support team folder access`
+
+Added `mtorres` as a member of `Support-Team`.
+
+### 3. Create the Support Folder
+
+Created the following folder:
+
+`C:\LabData\Support`
+
+### 4. Review Existing NTFS Permissions
+
+Reviewed the folder's Security properties.
+
+The folder initially inherited permissions for:
+
+- `Authenticated Users`
+- `Users`
+- `SYSTEM`
+- `Administrators`
+
+The `Authenticated Users` and `Users` entries allowed users to modify the folder independently of membership in `Support-Team`.
+
+### 5. Correct the Folder Permissions
+
+Disabled permission inheritance and converted the inherited permissions into explicit permissions.
+
+Removed:
+
+- `Authenticated Users`
+- `Users`
+
+Retained:
+
+- `SYSTEM`
+- `Administrators`
+
+Added `Support-Team` and granted the `Modify` permission.
+
+`Full control` was not granted.
+
+### 6. Sign In as the New User
+
+Signed out of the administrator account and signed in as Maya Torres.
+
+The user successfully changed the temporary password during the first sign-in.
