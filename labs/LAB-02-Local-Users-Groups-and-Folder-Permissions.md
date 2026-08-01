@@ -146,6 +146,45 @@ This confirmed that the account did not have elevated administrative privileges.
 
 ![Standard user administrative access denied](../screenshots/LAB-02/05-standard-user-admin-access-denied.png)
 
+## Troubleshooting
+
+### Initial Sign-In Attempt
+
+The first sign-in attempt did not accept the temporary credentials.
+
+The account name and password were reviewed, and the sign-in was attempted again successfully. Windows then required the user to create a new password.
+
+This reinforced the importance of verifying the selected account and credentials before resetting or recreating an account.
+
+### Permission Application Warning
+
+While changing the folder permissions, Windows displayed the following message:
+
+`Failed to enumerate objects in the container. Access is denied.`
+
+The operation was allowed to continue, and the final folder permissions were reviewed afterward.
+
+The completed configuration correctly showed:
+
+- `SYSTEM`
+- `Administrators`
+- `Support-Team` with `Modify`
+
+The unnecessary `Authenticated Users` and `Users` entries were no longer present.
+
+This demonstrated that an error message should be investigated and that the final configuration must be validated before determining whether an operation succeeded or failed.
+
+## Lessons Learned
+
+- Standard users can access authorized resources without receiving administrative privileges.
+- Permissions are easier to manage when assigned to groups instead of individual users.
+- Inherited permissions must be reviewed because they can provide access through an unintended path.
+- The `Modify` permission allows users to create, edit, rename, and delete files without granting `Full control`.
+- NTFS permissions control access to files and folders stored on a Windows file system.
+- The principle of least privilege means granting only the permissions required for a user’s role.
+- Access validation should test both permitted actions and actions that must remain restricted.
+- Error messages should be documented together with the checks used to confirm the final result.
+
 ## Conclusion
 
 The objectives of LAB-02 were completed successfully.
