@@ -51,8 +51,33 @@ Prepared and validated a newly installed Windows 11 workstation by reviewing:
 **Documentation:**  
 [View LAB-01 — Windows Workstation Inventory](labs/LAB-01-Windows-Workstation-Inventory.md)
 
+**Evidence:**  
+[View LAB-01 Evidence Gallery](screenshots/LAB-01/README.md)
+
 **Related service request:**  
 [View SR-001 — New Workstation Setup and Baseline Inventory](/juanko31359/IT-Support-Lab/issues/1)
+
+### LAB-02 — Local Users, Groups, and Folder Permissions
+
+Provisioned a standard local user account and configured secure access to a designated support folder by:
+
+- Creating the local account `mtorres`
+- Creating and managing the local group `Support-Team`
+- Assigning access through group membership
+- Reviewing and correcting inherited NTFS permissions
+- Granting `Modify` permission without `Full control`
+- Testing file creation, editing, renaming, and deletion
+- Confirming that administrative access was denied
+- Documenting and closing the related service request
+
+**Documentation:**  
+[View LAB-02 — Local Users, Groups, and Folder Permissions](labs/LAB-02-Local-Users-Groups-and-Folder-Permissions.md)
+
+**Evidence:**  
+[View LAB-02 Evidence Gallery](screenshots/LAB-02/README.md)
+
+**Related service request:**  
+[View SR-002 — Provision Local User and Folder Access](/juanko31359/IT-Support-Lab/issues/2)
 
 ## Skills Practiced
 
@@ -95,7 +120,7 @@ The labs use the following support process:
 ## Learning Roadmap
 
 - [x] Windows workstation baseline and inventory
-- [ ] Local users, groups, and permissions
+- [x] Local users, groups, and permissions
 - [ ] Windows processes, services, and startup troubleshooting
 - [ ] Storage and application troubleshooting
 - [ ] Network connectivity troubleshooting
