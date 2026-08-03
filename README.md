@@ -79,6 +79,28 @@ Provisioned a standard local user account and configured secure access to a desi
 **Related service request:**  
 [View SR-002 — Provision Local User and Folder Access](/juanko31359/IT-Support-Lab/issues/2)
 
+### LAB-03 — Windows Processes, Services, and Startup Troubleshooting
+
+Investigated and resolved an unexpected startup application and an unavailable Windows service by:
+
+- Reproducing the reported startup behavior
+- Identifying `Notepad.exe` and its process ID
+- Reviewing Startup apps and the user's Startup folder
+- Distinguishing the executable from the mechanism that launched it
+- Querying the Print Spooler state and configuration
+- Restoring the service to `AUTO_START`
+- Confirming that the service remained `RUNNING` after restarting Windows
+- Documenting and closing the related incident
+
+**Documentation:**  
+[View LAB-03 — Windows Processes, Services, and Startup Troubleshooting](labs/LAB-03-Windows-Processes-Services-and-Startup-Troubleshooting.md)
+
+**Evidence:**  
+[View LAB-03 Evidence Gallery](screenshots/LAB-03/README.md)
+
+**Related incident:**  
+[View INC-003 — Unexpected Startup Application and Print Service Failure](/juanko31359/IT-Support-Lab/issues/3)
+
 ## Skills Practiced
 
 - Windows 11 workstation setup
@@ -121,7 +143,7 @@ The labs use the following support process:
 
 - [x] Windows workstation baseline and inventory
 - [x] Local users, groups, and permissions
-- [ ] Windows processes, services, and startup troubleshooting
+- [x] Windows processes, services, and startup troubleshooting
 - [ ] Storage and application troubleshooting
 - [ ] Network connectivity troubleshooting
 - [ ] Windows Event Viewer
