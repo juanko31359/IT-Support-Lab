@@ -80,6 +80,33 @@ The saved document:
 - Reopened successfully in Notepad
 - Contained all 3,000 test lines
 
+## 7. Final Storage Cleanup Validation
+
+After completing the functional validation, the remaining controlled test file `LAB-04-FILLER-01.bin` was deleted.
+
+The `fsutil volume diskfree D:` command confirmed:
+
+`1,163,829,248 bytes free`
+
+The contents of the volume were reviewed again using:
+
+```cmd
+dir D:\ /a /-c
+```
+
+The final review confirmed that:
+
+- Both controlled filler files had been removed
+- `Maya-Storage-Large-Test.txt` remained intact at `322,893` bytes
+- `Maya-Storage-Test.txt` remained intact at `36` bytes
+- `$RECYCLE.BIN` was preserved
+- `System Volume Information` was preserved
+- The volume had approximately 98% available free space
+
+This confirmed that the test data was removed safely without deleting user files or Windows system directories.
+
+![Final storage cleanup validation](07-final-storage-cleanup-validation.png)
+
 This confirmed that the correction remained effective after the restart.
 
 ![Post-restart file validation](06-post-restart-file-validation.png)
