@@ -79,6 +79,10 @@ The saved document:
 - Retained its full size of `322,893` bytes
 - Reopened successfully in Notepad
 - Contained all 3,000 test lines
+  
+This confirmed that the correction remained effective after the restart.
+
+![Post-restart file validation](06-post-restart-file-validation.png)
 
 ## 7. Final Storage Cleanup Validation
 
@@ -106,7 +110,3 @@ The final review confirmed that:
 This confirmed that the test data was removed safely without deleting user files or Windows system directories.
 
 ![Final storage cleanup validation](07-final-storage-cleanup-validation.png)
-
-This confirmed that the correction remained effective after the restart.
-
-![Post-restart file validation](06-post-restart-file-validation.png)
