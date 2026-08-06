@@ -14,6 +14,7 @@ Open Windows Run with:
 |---|---|
 | `lusrmgr.msc` | Opens **Local Users and Groups Manager** to manage local users and groups. |
 | `shell:startup` | Opens the Startup folder for the currently signed-in user. Shortcuts placed here can launch automatically at sign-in. |
+| `diskmgmt.msc` | Opens Disk Management to initialize disks, create volumes, format file systems, and manage drive letters. |
 
 ---
 
@@ -134,6 +135,68 @@ Starts a Windows service.
 
 ---
 
+## Command Prompt — Storage and Files
+
+| Command | Meaning |
+|---|---|
+| `fsutil volume diskfree D:` | Displays the total, used, reserved, and available space on volume `D:`. |
+| `fsutil file createnew D:\LAB-04-FILLER-01.bin 1150000000` | Creates a file with a specified logical length in bytes. Requires administrator privileges. |
+| `dir D:\Maya-Storage-Large-Test.txt` | Confirms whether the specified file exists and displays its size. |
+| `dir D:\ /a /-c` | Displays all items on `D:`, including hidden and system items, with exact byte values. |
+| `del D:\LAB-04-FILLER-02.bin` | Deletes the specified verified file. |
+| `notepad D:\Maya-Storage-Large-Test.txt` | Opens the specified text file in Notepad. |
+| `(for /L %i in (1,1,3000) do @echo <text>) > "<file path>"` | Repeats text a specified number of times and redirects the output into a file. |
+
+### General Syntax
+
+```cmd
+fsutil volume diskfree <drive letter>:
+```
+
+Displays storage information for the selected volume.
+
+```cmd
+fsutil file createnew <file path> <length in bytes>
+```
+
+Creates a file with the specified logical length.
+
+```cmd
+dir <file or folder path>
+```
+
+Displays information about the selected file or directory.
+
+```cmd
+dir <drive or folder> /a /-c
+```
+
+Displays hidden and system items and shows exact byte values without digit separators.
+
+```cmd
+del <file path>
+```
+
+Deletes the specified file. The target should be verified before running the command.
+
+```cmd
+notepad <file path>
+```
+
+Opens the specified file in Notepad.
+
+### Parameters Introduced
+
+| Parameter or operator | Meaning |
+|---|---|
+| `/a` | Displays all items, including hidden and system files and folders. |
+| `/-c` | Removes digit separators from file sizes in `dir` output. |
+| `/L` | Runs a numbered loop with the `for` command. |
+| `>` | Redirects command output into a file, replacing the destination if it exists. |
+| `%i` | Loop variable used by the `for` command in Command Prompt. |
+
+---
+
 ## Common Parameters and Terms
 
 | Term | Meaning |
@@ -153,6 +216,6 @@ Starts a Windows service.
 
 ## PowerShell
 
-No PowerShell commands have been used in LAB-01 through LAB-03.
+No PowerShell commands have been used in LAB-01 through LAB-04.
 
 New PowerShell commands will be added here as they are introduced in future labs.
