@@ -101,6 +101,33 @@ Investigated and resolved an unexpected startup application and an unavailable W
 **Related incident:**  
 [View INC-003 — Unexpected Startup Application and Print Service Failure](/juanko31359/IT-Support-Lab/issues/3)
 
+### LAB-04 — Storage and Application Troubleshooting
+
+Investigated and resolved an application save failure caused by insufficient storage space by:
+
+- Preparing an isolated secondary virtual disk
+- Initializing the disk using GPT
+- Creating the NTFS volume `LAB-DATA (D:)`
+- Recording the original storage capacity and available space
+- Creating controlled filler files to reproduce the incident
+- Confirming that Notepad was functioning correctly
+- Identifying insufficient storage as the root cause
+- Restoring space without deleting user files or system directories
+- Validating the saved document's size and contents
+- Confirming that the correction persisted after restarting Windows
+- Removing the remaining controlled test data
+- Restoring the volume to approximately 98% available space
+- Documenting and closing the related incident
+
+**Documentation:**  
+[View LAB-04 — Storage and Application Troubleshooting](labs/LAB-04-Storage-and-Application-Troubleshooting.md)
+
+**Evidence:**  
+[View LAB-04 Evidence Gallery](screenshots/LAB-04/README.md)
+
+**Related incident:**  
+[View INC-004 — Application Cannot Save File Due to Insufficient Disk Space](/juanko31359/IT-Support-Lab/issues/4)
+
 ## Skills Practiced
 
 - Windows 11 workstation setup
@@ -125,6 +152,13 @@ Investigated and resolved an unexpected startup application and an unavailable W
 - GitHub Issues
 - Markdown
 - Privacy-aware documentation
+- Disk Management
+- GPT and NTFS volume configuration
+- Windows storage capacity analysis
+- `fsutil`
+- Controlled storage incident reproduction
+- File integrity validation
+- Application-versus-storage troubleshooting
 
 ## Support Workflow
 
@@ -144,7 +178,7 @@ The labs use the following support process:
 - [x] Windows workstation baseline and inventory
 - [x] Local users, groups, and permissions
 - [x] Windows processes, services, and startup troubleshooting
-- [ ] Storage and application troubleshooting
+- [x] Storage and application troubleshooting
 - [ ] Network connectivity troubleshooting
 - [ ] Windows Event Viewer
 - [ ] PowerShell system administration
